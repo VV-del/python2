@@ -1,0 +1,9 @@
+# 构建一个序列tag，里面包含一个元素
+tag=['https://www.meizu.com/en/m10/summary/index.html']
+
+# 拿到这个元素后通过分片取出一个范围的值
+print(tag[0][0:21])
+
+
+num=[1,2,3,4,5,6,7,8,9,10,11,12]
+print(num[3:6])
