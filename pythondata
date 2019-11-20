@@ -9,3 +9,14 @@ num=[1,2,3,4,5,6,7,8,9,10,11,12]
 print(num[3:6])
 #按步长2返回第1个至第8个之间的数字
 print(num[0:8:2])
+#负数为去后面所有序列元素
+print(num[5:-1])
+#负数开始从序列结尾开始往前遍历，起始索引数字一定要大于结尾
+print(num[-4:-1])
+print(num[:11:2])
+print(num+tag)
+print(tag*3)
+print(4 in num)
+print(len(num))
+print(max(num))
+print(min(num))
