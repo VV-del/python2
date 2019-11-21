@@ -22,7 +22,7 @@ class Solution:
 
 
 sol = Solution()
-print(sol.singleNumber([2,3,4,3,2,3,4,5,5,1]))
+print(sol.singleNumber([2,3,4,3,2,5,5]))
 
 
 #方法2
@@ -33,7 +33,7 @@ class Solution2:
 		r = 0
 		for i in nums:
 			r ^= i
-		return i
+		return r
 
 sox = Solution2()
-print(sox.singleNumber2([2,3,4,3,2,3,4,5,5,1]))
+print(sox.singleNumber2([2,3,4,3,2,5,5]))
