@@ -1,0 +1,11 @@
+dictionary = {"name":"zhangsan","age":12,"banji":"2班"}
+
+print(dictionary["name"])
+dictionary["age"] = 13
+print(dictionary["age"])
+# 删除name条目
+# del dictionary["name"]
+# 清空字典条目
+# dictionary.clear()
+# 删除字典
+# del dictionary
