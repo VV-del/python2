@@ -1,3 +1,4 @@
+
 dictionary = {"name":"zhangsan","age":12,"banji":"2班"}
 
 print(dictionary["name"])
@@ -9,3 +10,19 @@ print(dictionary["age"])
 # dictionary.clear()
 # 删除字典
 # del dictionary
+print(str(dictionary))
+dict = dictionary.copy()
+dictionary["name"] = "lisi" #copy不会随着父对象的改变而改变
+print(dictionary,dict)
+
+# dict.fromkeys(seq[,value])
+seq =("name1","age1","banji1")
+# dict = dict.fromkeys(seq,19)
+print(str(dict))
+
+print(dict.get("name"))
+
+print(dict.items())
+print(dict.keys())
+list1 = list(dict.keys())
+print(list1)
