@@ -1,0 +1,20 @@
+二进制计算
+给定两个二进制字符串，返回他们的和（用二进制表示）。
+输入为非空字符串且只包含数字 1 和 0。
+示例 1:
+输入: a = "11", b = "1"输出: "100"
+示例 2:
+输入: a = "1010", b = "1011"输出: "10101"
+
+解题思路:
+先使用 int(var, 2) 的方式将输入的二进制字符串转为 int，然后相加，得到和 sum 后，再使用 format(sum, 'b') 将结果转回二进制字符串，即为所需结果
+
+class Solution4:
+    def addBinary(self, a: str, b: str) -> str:
+        num1 = int(a, 2)
+        num2 = int(b, 2)
+        sum0 = num1 + num2
+        return format(sum0,'b')
+
+soll = Solution4()
+print(soll.addBinary('11','1'))
