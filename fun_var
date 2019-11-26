@@ -1,0 +1,27 @@
+def variable_fun(kind, *arguments, **keywords):
+    print("friend : ", kind, ";")
+    print("*" * 60)
+    for arg in arguments:
+        print(arg)
+    print("-" * 60)
+    for kw in keywords:
+        print(kw, ":", keywords[kw])
+        
+#函数调用
+print(variable_fun("xiaoming",
+             "hello xiaoming", "nice to meet you!",
+            mother="xiaoma",
+            father="xiaoba",
+            son="see you",
+            dauther='ss'))
+
+# list01 = ["hello xiaoming", "nice to meet you!"]
+# dict01 = {'mother': 'xiaoma', 'father': 'xiaoba', 'son': 'see you'}
+# variable_fun("xiaoming", *list01, **dict01)
+
+def vsfds(diu2,*er,**san):
+    for ere in er:
+        print(ere)
+    for asn in san:
+        print(asn,san[asn])
+print(vsfds("dfs","sdfdsfdsfds",ss="dsfdsfsdfdsfdsfdsfd"))
