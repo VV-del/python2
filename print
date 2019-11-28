@@ -1,0 +1,14 @@
+print('{0} 和 {1} 及 {2}'.format('Hello', 'Python','haha'))
+
+print('{name}网址：{site}'.format(name='Python技术', site='www.justdopython.com'))
+
+
+"repr() shows quotes: {!a}; str() doesn't: {!s}".format('test1', 'test2')
+
+table = {'Sjoerd': 123, 'Jack': 456, 'Dcab': 789789789789}
+print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
+	
+f = open("test.txt","r")
+str = f.readlines()
+print(str)
+f.close()
