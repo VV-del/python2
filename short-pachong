@@ -1,0 +1,31 @@
+# 爬取页面详细信息
+import requests
+import lxml.etree
+
+# 电影详细页面
+url = 'https://movie.douban.com/subject/2222996/'
+
+# 请求头部信息
+user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
+
+header = {}
+header['user-agent'] = user_agent
+response = requests.get(url, headers=header)
+
+# xml化处理
+selector = lxml.etree.HTML(response.text)
+
+# 电影名称
+name = selector.xpath('//*[@id="content"]/h1/span[1]/text()')
+print(f'电影名称: {name}')
+
+# 导演
+director = selector.xpath('//*[@id="info"]/span[1]/span[2]/a/text()')
+print(f'导演名称: {director}')
+
+# 短评
+# short = selector.xpath('//*[@id="hot-comments"]/div//div/p/span/text()')
+# print(short)
+shorts = selector.xpath('//*[@id="hot-comments"]/div//div/p/span')
+short = [i.text for i in shorts ]
+print(short)
